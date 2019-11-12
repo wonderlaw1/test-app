@@ -9,6 +9,7 @@ import { AppComponent } from './containers/app/app.component';
 import {environment} from '../environments/environment';
 
 import {Store} from 'store';
+import {AuthModule} from './auth/auth.module';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import {Store} from 'store';
     AngularFireModule.initializeApp(environment.firebaseConfig, 'angular-pro-46357'),
     AngularFirestoreModule,
     AngularFireAuthModule,
-    AngularFireStorageModule
+    AngularFireStorageModule,
+    AuthModule
   ],
   providers: [Store],
   bootstrap: [AppComponent]
