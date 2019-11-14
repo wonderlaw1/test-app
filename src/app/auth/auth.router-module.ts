@@ -1,18 +1,19 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-const routes: Routes = [
+const ROUTES: Routes = [
   {
+    path: 'auth',
     children: [
-      {path: '', pathMatch: 'full', redirectTo: 'login'},
-      {path: 'login', loadChildren: './login/login.module#LoginModule'},
-      {path: 'register', loadChildren: './register/register.module#LoginModule'},
+      { path: '', pathMatch: 'full', redirectTo: 'login' },
+      { path: 'login', loadChildren: './login/login.module#LoginModule' },
+      { path: 'register', loadChildren: './register/register.module#RegisterModule' },
     ]
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
+  imports: [RouterModule.forChild(ROUTES)],
   exports: [RouterModule]
 })
 export class AuthRoutingModule { }

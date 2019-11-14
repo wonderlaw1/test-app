@@ -4,13 +4,17 @@ import {AngularFireModule} from '@angular/fire';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
 import {AngularFireStorageModule} from '@angular/fire/storage';
 import {AngularFireAuthModule} from '@angular/fire/auth';
+import {Store} from 'store';
 
-import { AppComponent } from './containers/app/app.component';
 import {environment} from '../environments/environment';
 
-import {Store} from 'store';
-import {AuthModule} from './auth/auth.module';
+import { AppComponent } from './containers/app/app.component';
+import { AppRoutingModule } from './app.routing-module';
+import { AuthModule } from './auth/auth.module';
+import { RouterModule, Routes } from '@angular/router';
 
+
+export const ROUTES: Routes = [];
 
 @NgModule({
   declarations: [
@@ -18,6 +22,7 @@ import {AuthModule} from './auth/auth.module';
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig, 'angular-pro-46357'),
     AngularFirestoreModule,
     AngularFireAuthModule,
