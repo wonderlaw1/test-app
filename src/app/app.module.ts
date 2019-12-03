@@ -11,10 +11,7 @@ import {environment} from '../environments/environment';
 import { AppComponent } from './containers/app/app.component';
 import { AppRoutingModule } from './app.routing-module';
 import { AuthModule } from './auth/auth.module';
-import { RouterModule, Routes } from '@angular/router';
 
-
-export const ROUTES: Routes = [];
 
 @NgModule({
   declarations: [
