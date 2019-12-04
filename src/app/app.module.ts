@@ -20,7 +20,7 @@ import { AuthModule } from './auth/auth.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig, 'angular-pro-46357'),
+    AngularFireModule.initializeApp(environment.firebaseConfig, 'angular-pro-93fe1'),
     AngularFirestoreModule,
     AngularFireAuthModule,
     AngularFireStorageModule,

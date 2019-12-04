@@ -2,7 +2,7 @@
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
-import {FirebaseAppConfig} from '@angular/fire';
+import { FirebaseAppConfig } from '@angular/fire';
 
 interface AppEnv {
   production: boolean;
@@ -12,14 +12,14 @@ interface AppEnv {
 export const environment: AppEnv = {
   production: false,
   firebaseConfig: {
-    apiKey: 'AIzaSyBsU9xSSNiW_WKZejh1sC60nHGCiIEHwTE',
-    authDomain: 'angular-pro-46357.firebaseapp.com',
-    databaseURL: 'https://angular-pro-46357.firebaseio.com',
-    projectId: 'angular-pro-46357',
-    storageBucket: 'angular-pro-46357.appspot.com',
-    messagingSenderId: '321075356107',
-    appId: '1:321075356107:web:a8bcd4fec12e12d9dd564e',
-    measurementId: 'G-9VD6FTVZCL'
+    apiKey: 'AIzaSyA2HTghLf4CWs-CoDZN1B9EAs9COyVQROE',
+    authDomain: 'angular-pro-93fe1.firebaseapp.com',
+    databaseURL: 'https://angular-pro-93fe1.firebaseio.com',
+    projectId: 'angular-pro-93fe1',
+    storageBucket: 'angular-pro-93fe1.appspot.com',
+    messagingSenderId: '416970614087',
+    appId: '1:416970614087:web:dd901deb688c7ad6601862',
+    measurementId: 'G-15RCV59T9H'
   }
 };
 

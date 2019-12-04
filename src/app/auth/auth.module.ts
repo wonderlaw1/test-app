@@ -22,7 +22,7 @@ export const ROUTES: Routes = [
     CommonModule,
     RouterModule.forChild(ROUTES),
     AuthRoutingModule,
-    SharedModule
+    SharedModule.forRoot()
   ]
 })
 export class AuthModule { }
