@@ -32,6 +32,10 @@ export class AuthService {
     return this.af.auth.signOut();
   }
 
+  get authState() {
+    return this.af.authState;
+  }
+
   private onAuth = (next: firebase.User): void => {
     if (!next) {
       this.store.set('user', null);

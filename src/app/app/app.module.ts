@@ -13,6 +13,7 @@ import { AppRoutingModule } from './app.routing-module';
 import { AuthModule } from '../auth/auth.module';
 import { NavComponent } from './components/nav/nav.component';
 import { HeaderComponent } from './components/header/header.component';
+import { HealthModule } from '../health/health.module';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { HeaderComponent } from './components/header/header.component';
     AngularFirestoreModule,
     AngularFireAuthModule,
     AngularFireStorageModule,
-    AuthModule
+    AuthModule,
+    HealthModule
   ],
   providers: [Store],
   bootstrap: [AppComponent]
