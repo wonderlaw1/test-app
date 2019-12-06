@@ -6,16 +6,20 @@ import {AngularFireStorageModule} from '@angular/fire/storage';
 import {AngularFireAuthModule} from '@angular/fire/auth';
 import {Store} from 'store';
 
-import {environment} from '../environments/environment';
+import {environment} from '../../environments/environment';
 
 import { AppComponent } from './containers/app/app.component';
 import { AppRoutingModule } from './app.routing-module';
-import { AuthModule } from './auth/auth.module';
+import { AuthModule } from '../auth/auth.module';
+import { NavComponent } from './components/nav/nav.component';
+import { HeaderComponent } from './components/header/header.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,

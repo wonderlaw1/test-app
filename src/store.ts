@@ -1,12 +1,18 @@
 import {BehaviorSubject, Observable} from 'rxjs';
 import {distinctUntilChanged, pluck} from 'rxjs/operators';
+import { User } from './app/auth/shared/services/auth/auth.service';
+import { Injectable } from '@angular/core';
 
 export interface State {
+  user: User;
   [key: string]: any;
 }
 
-const basicState: State = {};
+const basicState: State = {
+  user: undefined
+};
 
+@Injectable()
 export class Store {
 
   private subject = new BehaviorSubject<State>(basicState);
