@@ -36,6 +36,10 @@ export class AuthService {
     return this.af.authState;
   }
 
+  get user() {
+    return this.af.auth.currentUser;
+  }
+
   private onAuth = (next: firebase.User): void => {
     if (!next) {
       this.store.set('user', null);

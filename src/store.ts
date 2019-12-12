@@ -1,15 +1,20 @@
 import {BehaviorSubject, Observable} from 'rxjs';
 import {distinctUntilChanged, pluck} from 'rxjs/operators';
-import { User } from './app/auth/shared/services/auth/auth.service';
 import { Injectable } from '@angular/core';
+
+import { User } from './app/auth/shared/services/auth/auth.service';
+import { Meal } from './app/health/shared/services/meals/meals.service';
+
 
 export interface State {
   user: User;
+  meals: Meal[];
   [key: string]: any;
 }
 
 const basicState: State = {
-  user: undefined
+  user: undefined,
+  meals: undefined
 };
 
 @Injectable()
