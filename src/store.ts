@@ -25,7 +25,7 @@ export class Store {
     distinctUntilChanged()
   );
 
-  get value() {
+  private get value() {
     return this.subject.value;
   }
 
