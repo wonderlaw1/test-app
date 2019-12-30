@@ -49,6 +49,6 @@ export class WorkoutComponent implements OnInit, OnDestroy {
   }
 
   private backToWorkouts() {
-    this.router.navigate(['meals']);
+    this.router.navigate(['workouts']);
   }
 }
