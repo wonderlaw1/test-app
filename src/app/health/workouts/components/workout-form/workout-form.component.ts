@@ -20,7 +20,16 @@ export class WorkoutFormComponent implements OnInit, OnChanges {
 
   form = this.fb.group({
     name: ['', Validators.required],
-    type: 'strength'
+    type: 'strength',
+    strength: this.fb.group({
+      reps: 0,
+      sets: 0,
+      weight: 0
+    }),
+    endurance: this.fb.group({
+      distance: 0,
+      duration: 0
+    })
   });
 
   constructor(private fb: FormBuilder) { }
@@ -32,13 +41,16 @@ export class WorkoutFormComponent implements OnInit, OnChanges {
     );
   }
 
+  get placeholder() {
+    return `e.g. ${this.form.get('type').value === 'strength' ? 'Benchpress' : 'Treadmill'}`;
+  }
+
   ngOnInit() {
   }
 
   ngOnChanges(): void {
     if (this.workout && this.workout.name) {
       this.exists = true;
-
       const value = this.workout;
       this.form.patchValue(value);
     }
