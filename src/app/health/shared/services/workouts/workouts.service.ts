@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Store } from 'store';
 import { Observable, of } from 'rxjs';
-import { filter, map } from 'rxjs/operators';
+import {filter, map, tap} from 'rxjs/operators';
 import { AngularFireDatabase } from '@angular/fire/database';
 
 import { AuthService } from '../../../../auth/shared/services/auth/auth.service';
@@ -29,7 +29,7 @@ export class WorkoutsService {
         const $key = i.payload.key;
         return {$key, ...data};
       });
-      this.store.set('workouts$', items);
+      this.store.set('workouts', items);
       return items;
     })
   );
@@ -46,7 +46,7 @@ export class WorkoutsService {
     if (!key) {
       return of({} as Workout);
     }
-    return this.store.select<Workout[]>('workouts$').pipe(
+    return this.store.select<Workout[]>('workouts').pipe(
       filter(Boolean),
       map((workouts: Workout[]) => {
         return workouts.find(workout => workout.$key === key);
