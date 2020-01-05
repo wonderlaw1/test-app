@@ -8,6 +8,7 @@ import { WorkoutsService } from './services/workouts/workouts.service';
 import { ListItemComponent } from './components/list-item/list-item.component';
 import { JoinPipe } from './pipes/join.pipe';
 import { WorkoutPipe } from './pipes/workout.pipe';
+import {ScheduleService} from './services/schedule/schedule.service';
 
 
 @NgModule({
@@ -31,7 +32,7 @@ export class SharedModule {
   static forRoot(): ModuleWithProviders {
     return {
       ngModule: SharedModule,
-      providers: [MealsService, WorkoutsService]
+      providers: [MealsService, WorkoutsService, ScheduleService]
     };
   }
 }

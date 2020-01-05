@@ -11,13 +11,15 @@ export interface State {
   user: User;
   meals: Meal[];
   workouts: Workout[];
+  date: Date;
   [key: string]: any;
 }
 
 const basicState: State = {
   user: undefined,
   meals: undefined,
-  workouts: undefined
+  workouts: undefined,
+  date: undefined
 };
 
 @Injectable()
