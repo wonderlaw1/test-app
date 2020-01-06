@@ -30,4 +30,8 @@ export class ScheduleComponent implements OnInit, OnDestroy {
     this.subscriptions.forEach(sub => sub.unsubscribe());
   }
 
+  changeDate(date: Date) {
+    this.scheduleService.updateDate(date);
+  }
+
 }

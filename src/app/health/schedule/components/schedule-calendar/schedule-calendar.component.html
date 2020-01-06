@@ -1,3 +1,11 @@
 <div class="calendar">
-  {{ date | json }}
+  <app-schedule-controls
+    [selected]="selectedDay"
+    (move)="onChange($event)"
+  ></app-schedule-controls>
+
+  <app-schedule-days
+    [selected]="selectedDayIndex"
+    (selectDay)="onSelectDay($event)">
+  </app-schedule-days>
 </div>
