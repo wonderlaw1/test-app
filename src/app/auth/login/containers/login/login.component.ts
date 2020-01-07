@@ -29,4 +29,13 @@ export class LoginComponent implements OnInit {
     }
   }
 
+  async googleAuth() {
+    try {
+      await this.authService.loginGoogleUser();
+      this.router.navigate(['/']);
+    } catch (err) {
+      this.error = err.message;
+    }
+  }
+
 }

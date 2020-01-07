@@ -1,6 +1,7 @@
 <app-auth-form (submitted)="loginUser($event)">
   <h1>Login</h1>
   <a routerLink="/auth/register">Not registered?</a>
-  <button type="submit">Login</button>
+  <button type="submit" class="login">Login</button>
   <div class="error" *ngIf="error">{{ error }}</div>
+  <button type="button" (click)="googleAuth()" class="google">Google</button>
 </app-auth-form>
