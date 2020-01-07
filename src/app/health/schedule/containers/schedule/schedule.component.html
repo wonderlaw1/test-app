@@ -5,4 +5,12 @@
     (changeDate)="changeDate($event)"
     (selectSection)="selectSection($event)">
   </app-schedule-calendar>
+
+  <app-schedule-assign
+    *ngIf="open"
+    [section]="selected$ | async"
+    [list]="list$ | async"
+    (update)="assignItem($event)"
+    (cancel)="closeAssign()">
+  </app-schedule-assign>
 </div>

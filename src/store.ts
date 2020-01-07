@@ -13,6 +13,7 @@ export interface State {
   meals: Meal[];
   workouts: Workout[];
   selected: any;
+  list: any;
   date: Date;
   schedule: ScheduleItem[];
   [key: string]: any;
@@ -22,6 +23,7 @@ const basicState: State = {
   user: undefined,
   meals: undefined,
   workouts: undefined,
+  list: undefined,
   date: undefined,
   schedule: undefined,
   selected: undefined
@@ -35,7 +37,7 @@ export class Store {
     distinctUntilChanged()
   );
 
-  private get value() {
+  get value() {
     return this.subject.value;
   }
 
