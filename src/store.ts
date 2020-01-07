@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 import { User } from './app/auth/shared/services/auth/auth.service';
 import { Meal } from './app/health/shared/services/meals/meals.service';
 import { Workout } from './app/health/shared/services/workouts/workouts.service';
+import {ScheduleItem} from './app/health/shared/services/schedule/schedule.service';
 
 
 export interface State {
@@ -12,6 +13,7 @@ export interface State {
   meals: Meal[];
   workouts: Workout[];
   date: Date;
+  schedule: ScheduleItem[];
   [key: string]: any;
 }
 
@@ -19,7 +21,8 @@ const basicState: State = {
   user: undefined,
   meals: undefined,
   workouts: undefined,
-  date: undefined
+  date: undefined,
+  schedule: undefined
 };
 
 @Injectable()
