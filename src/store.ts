@@ -12,6 +12,7 @@ export interface State {
   user: User;
   meals: Meal[];
   workouts: Workout[];
+  selected: any;
   date: Date;
   schedule: ScheduleItem[];
   [key: string]: any;
@@ -22,7 +23,8 @@ const basicState: State = {
   meals: undefined,
   workouts: undefined,
   date: undefined,
-  schedule: undefined
+  schedule: undefined,
+  selected: undefined
 };
 
 @Injectable()

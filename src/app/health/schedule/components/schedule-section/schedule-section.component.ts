@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, Input, EventEmitter} from '@angular/core';
+import {ChangeDetectionStrategy, Component, Input, EventEmitter, Output} from '@angular/core';
 
 import {ScheduleItem} from '../../../shared/services/schedule/schedule.service';
 import {Meal} from '../../../shared/services/meals/meals.service';
@@ -14,7 +14,7 @@ export class ScheduleSectionComponent {
 
   @Input() name: string;
   @Input() section: ScheduleItem;
-  @Input() selectSection = new EventEmitter<any>();
+  @Output() selectSection = new EventEmitter<any>();
 
   onSelect(type: string, assigned: Meal[] | Workout[] = []) {
     const data = this.section;
