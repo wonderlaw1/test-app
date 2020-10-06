@@ -17,5 +17,5 @@ deploy:
   github-token: $GITHUB_TOKEN
   local_dir: docs
   on:
-    branch: master
+    branch: gh-pages
 
