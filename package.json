@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "build:prod": "ng build --prod --baseHref=\"https://wonderlaw1.github.io/test-app/\"",
-    "test": "ng test --watch=false",
+    "test": "ng test",
+    "test:ci": "ng test --watch=false --browsers=ChromeHeadless",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
