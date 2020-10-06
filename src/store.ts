@@ -1,12 +1,35 @@
 import {BehaviorSubject, Observable} from 'rxjs';
 import {distinctUntilChanged, pluck} from 'rxjs/operators';
+import { Injectable } from '@angular/core';
+
+import { User } from './app/auth/shared/services/auth/auth.service';
+import { Meal } from './app/health/shared/services/meals/meals.service';
+import { Workout } from './app/health/shared/services/workouts/workouts.service';
+import {ScheduleItem} from './app/health/shared/services/schedule/schedule.service';
+
 
 export interface State {
+  user: User;
+  meals: Meal[];
+  workouts: Workout[];
+  selected: any;
+  list: any;
+  date: Date;
+  schedule: ScheduleItem[];
   [key: string]: any;
 }
 
-const basicState: State = {};
+const basicState: State = {
+  user: undefined,
+  meals: undefined,
+  workouts: undefined,
+  list: undefined,
+  date: undefined,
+  schedule: undefined,
+  selected: undefined
+};
 
+@Injectable()
 export class Store {
 
   private subject = new BehaviorSubject<State>(basicState);
