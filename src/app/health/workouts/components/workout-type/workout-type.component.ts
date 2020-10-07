@@ -1,18 +1,18 @@
 import {ChangeDetectionStrategy, Component, forwardRef, OnInit} from '@angular/core';
 import {ControlValueAccessor, NG_VALUE_ACCESSOR} from '@angular/forms';
 
-export const TYPE_VALUE_ACCESSOR = {
-  provide: NG_VALUE_ACCESSOR,
-  useExisting: forwardRef(() => WorkoutTypeComponent),
-  multi: true
-};
-
 
 @Component({
   selector: 'app-workout-type',
   templateUrl: './workout-type.component.html',
   styleUrls: ['./workout-type.component.scss'],
-  providers: [TYPE_VALUE_ACCESSOR],
+  providers: [
+    {
+      provide: NG_VALUE_ACCESSOR,
+      useExisting: forwardRef(() => WorkoutTypeComponent),
+      multi: true
+    }
+  ],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class WorkoutTypeComponent implements OnInit, ControlValueAccessor {
